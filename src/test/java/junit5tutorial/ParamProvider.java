@@ -10,10 +10,10 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class ParamProvider {
 
     static List<String> sourceString() {
-        return Arrays.asList("tomato", "carrot", "cabbage");
+        return Arrays.asList("cat", "parrot", "dog");
     }
 
     static List<Arguments> sourceList_StringDouble(){
-        return Arrays.asList(arguments("tomato", 2.0),arguments("carrot", 5.0),arguments("cabbage", 3.0));
+        return Arrays.asList(arguments("cat", 2.0),arguments("parrot", 5.0),arguments("dog", 3.0));
     }
 }

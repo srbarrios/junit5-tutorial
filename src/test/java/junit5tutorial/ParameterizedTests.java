@@ -2,12 +2,10 @@ package junit5tutorial;
 
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.*;
-
-import java.util.Arrays;
-import java.util.List;
-
-import static org.junit.jupiter.params.provider.Arguments.arguments;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ParameterizedTests {
@@ -26,13 +24,13 @@ public class ParameterizedTests {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"steve,rogers,test","captain,marvel","bucky,barnes"})
+    @CsvSource(value = {"oscar,barrios,not_used","copito,gato","capitan,perro"})
     void csvSource_StringString(String param1, String param2){
         System.out.println("param1 = " + param1 + ", param2 = " + param2);
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"steve,32,true","captain,1,false","bucky,67,true"})
+    @CsvSource(value = {"oscar,37,true","Lukas,4,false","sandra,33,true"})
     void csvSource_StringIntBoolean(String param1, int param2, boolean param3){
         System.out.println("param1 = " + param1 + ", param2 = " + param2 + ", param3 = " + param3);
     }

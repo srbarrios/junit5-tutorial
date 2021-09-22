@@ -1,7 +1,8 @@
 package junit5tutorial;
 
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.function.Executable;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import java.util.Arrays;
 import java.util.List;
